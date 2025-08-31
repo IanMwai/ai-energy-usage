@@ -8,10 +8,10 @@ from datetime import datetime, timedelta
 import numpy as np
 
 # Read the API key from environment variables (GitHub Codespaces secret)
-API_KEY = os.getenv("API_KEY")
+API_KEY = st.secrets ["API_KEY"]
 
 if not API_KEY:
-    st.error("API_KEY not found in environment variables.")
+    st.error("API_KEY not found in st secrets.")
     st.stop()
 
 # Set headers
