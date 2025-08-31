@@ -7,12 +7,12 @@ import pandas as pd
 from datetime import datetime, timedelta
 import numpy as np
 
-from dotenv import load_dotenv
-# Load variables from .env file
-load_dotenv()
-
-# Read the API key
+# Read the API key from environment variables (GitHub Codespaces secret)
 API_KEY = os.getenv("API_KEY")
+
+if not API_KEY:
+    st.error("API_KEY not found in environment variables.")
+    st.stop()
 
 # Set headers
 headers = {
