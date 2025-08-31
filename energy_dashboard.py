@@ -7,7 +7,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 import numpy as np
 
-# Read the API key from environment variables (GitHub Codespaces secret)
+# Read the API key from streamlit secrets
 API_KEY = st.secrets ["API_KEY"]
 
 if not API_KEY:
